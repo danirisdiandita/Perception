@@ -1,135 +1,96 @@
-# Turborepo starter
+# Perception 
+<p align="center">
+  <img src="apps/web/public/perception.png" alt="Perception – Business First Computer Vision Dashboard" width="800">
+</p>
 
-This Turborepo starter is maintained by the Turborepo core team.
+<h1 align="center">Perception</h1>
+<p align="center"><b>Business First Computer Vision Dashboard</b></p>
 
-## Using this example
+---
 
-Run the following command:
+## Overview
 
-```sh
-npx create-turbo@latest
-```
+Perception is a business-first computer vision dashboard focused on turning raw visual data into clear, actionable insights for operators, analysts, and decision-makers. Instead of centering on models and infrastructure, Perception is built around the metrics, workflows, and outcomes that matter to the business.
 
-## What's inside?
+## Key Capabilities
 
-This Turborepo includes the following packages/apps:
+- **Business-first views**
+  Dashboards, KPIs, and alerts are organized around business questions (efficiency, safety, conversion, quality), not just technical metrics.
 
-### Apps and Packages
+- **Visual intelligence at a glance**
+  Summaries, trend lines, and breakdowns help you quickly understand what is happening across locations, cameras, and time.
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- **Configurable dashboards**
+  Flexible panels, filters, and layouts so teams can tailor the UI to their role (operations, product, data, leadership).
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- **Event- and insight-centric**
+  Focuses on events, anomalies, and patterns rather than raw frames, making it easier to act on what matters.
 
-### Utilities
+- **Collaboration-friendly**
+  Designed for sharing views, exporting insights, and aligning stakeholders around a single visual source of truth.
 
-This Turborepo has some additional tools already setup for you:
+## Example Use Cases
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- **Retail & QSR**
+  Measure foot traffic, queue times, conversion, and in-store behavior to optimize layouts and staffing.
 
-### Build
+- **Industrial & Logistics**
+  Monitor throughput, bottlenecks, and safety compliance on production lines, warehouses, and yards.
 
-To build all apps and packages, run the following command:
+- **Smart Buildings & Offices**
+  Understand occupancy, utilization, and flows to improve comfort, safety, and space planning.
 
-```
-cd my-turborepo
+- **Security & Safety**
+  Turn detections and alerts into understandable, high-level insights that can be triaged and resolved quickly.
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+## Project Structure (High Level)
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
+- **apps/web**
+  Main web-based dashboard experience and public assets (including `perception.png`).
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+Additional services, models, and infrastructure live in the rest of the repository and can be organized to match your deployment and data stack.
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+## Getting Started
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+Use this section as a high-level guide to running the dashboard in your environment. Exact commands and tooling may depend on how you bootstrap the project.
 
-### Develop
+1. **Clone the repository**
+   - Add this project to your workspace or clone it locally.
 
-To develop all apps and packages, run the following command:
+2. **Install dependencies**
+   - Install dependencies for the web dashboard in `apps/web` and any related services.
 
-```
-cd my-turborepo
+3. **Configure environment**
+   - Set environment variables and configuration for your data sources, camera feeds, or event streams.
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
+4. **Run the dashboard**
+   - Start the web app in development mode and connect it to your backend and vision services.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
+5. **Deploy**
+   - Deploy the dashboard using your preferred platform (container-based, serverless, on-prem, etc.).
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+## Design Principles
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
+- **Business outcomes first**
+  Every chart, metric, and view should map to a clear business question or decision.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+- **Clarity over complexity**
+  Hide unnecessary technical details from non-technical users while keeping depth available for experts.
 
-### Remote Caching
+- **Explainable visuals**
+  Make it obvious what each metric represents and how it is derived from underlying computer vision signals.
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+- **Composable building blocks**
+  Treat dashboards, tiles, and filters as building blocks that can be recombined for different teams and use cases.
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## Contributing
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+If you are extending Perception or integrating it into your stack:
 
-```
-cd my-turborepo
+- **Open issues** for bugs, enhancements, or questions.
+- **Propose improvements** to dashboards, UX flows, or metrics definitions that better reflect real business needs.
+- **Document integrations** (data sources, event pipelines, model outputs) so other collaborators can reuse them.
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
+## Notes
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+This README focuses on the product framing and high-level experience. For implementation details (frameworks, data pipelines, deployment, etc.), refer to the code, internal docs, or architecture diagrams within the repository.
